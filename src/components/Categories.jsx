@@ -58,32 +58,20 @@ const CategoriesSection = () => {
 
       {/* Pagination */}
       <div className="flex justify-center mt-6">
-        <button
-          onClick={() => paginate(currentPage - 1)}
-          disabled={currentPage === 1}
-          className="px-4 py-2 mx-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 disabled:opacity-50"
-        >
-          Previous
-        </button>
+      
         {/* Page Numbers */}
         {[...Array(totalPages)].map((_, index) => (
           <button
             key={index}
             onClick={() => paginate(index + 1)}
-            className={`px-4 py-2 mx-2 text-white rounded-lg hover:bg-gray-700 ${
+            className={`px-4 py-1 mx-1 text-white rounded-lg hover:bg-gray-700 ${
               currentPage === index + 1 ? "bg-indigo-600" : "bg-gray-800"
             }`}
           >
             {index + 1}
           </button>
         ))}
-        <button
-          onClick={() => paginate(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          className="px-4 py-2 mx-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 disabled:opacity-50"
-        >
-          Next
-        </button>
+       
       </div>
     </div>
   );
