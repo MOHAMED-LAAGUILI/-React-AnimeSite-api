@@ -10,7 +10,7 @@ import { ClerkProvider } from "@clerk/clerk-react";
 const queryClient = new QueryClient();
 
 // Import your publishable key
-const PUBLISHABLE_KEY = process.env.VITE_CLERK_PUBLISHABLE_KEY;
+const PUBLISHABLE_KEY = "pk_test_c21hcnQtZmlsbHktOS5jbGVyay5hY2NvdW50cy5kZXYk";
 
 if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
